@@ -24,3 +24,19 @@ function downloadPNG() {
     link.click();
   });
 }
+
+function fetchUser() {
+  const username = document.getElementById("username").value;
+
+  if (!username) {
+    alert("Enter username");
+    return;
+  }
+
+  // Simulated data
+  document.getElementById("messages").value = Math.floor(Math.random() * 2000);
+  document.getElementById("contribution").value =
+    "Active Reya contributor on X. Shared threads and insights.";
+
+  alert("User data fetched (demo mode)");
+}
