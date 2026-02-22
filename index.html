@@ -8,26 +8,30 @@
 </head>
 <body>
 
-<div class="container">
-  <h1 class="logo">REYA</h1>
-  <p class="subtitle">Official Community Certificate</p>
+<div class="form-box">
 
-  <div class="input-box">
-    <input type="text" id="nameInput" placeholder="Enter your name">
-    <button onclick="generateCertificate()">Generate</button>
-    <button onclick="downloadPNG()">Download PNG</button>
+  <label>X (Twitter) Username</label>
+  <div class="username-row">
+    <input type="text" id="username" placeholder="Enter username">
+    <button onclick="fetchUser()">Fetch</button>
   </div>
 
-  <div class="certificate" id="certificate">
-    <img src="reya-logo.png" class="watermark">
-    <div class="content">
-      <h2>Certificate of Contribution</h2>
-      <p>This certifies that</p>
-      <h3 id="certName">Your Name</h3>
-      <p>is a valued contributor of the Reya ecosystem.</p>
-      <span class="date" id="date"></span>
-    </div>
-  </div>
+  <label>Role</label>
+  <select id="role">
+    <option>Initiate</option>
+    <option>Contributor</option>
+    <option>Core Member</option>
+  </select>
+
+  <label>Total Messages (DC)</label>
+  <input type="number" id="messages" placeholder="e.g. 1234">
+
+  <label>Contribution / Post (DC)</label>
+  <textarea id="contribution" placeholder="Describe your contribution..."></textarea>
+
+  <button class="download-btn" onclick="downloadPNG()">
+    Download Certificate PNG
+  </button>
 
 </div>
 
